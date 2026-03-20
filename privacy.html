@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GenPlayer — Privacy Policy</title>
+    <title>GenPlayer - Privacy Policy</title>
     <meta name="description" content="GenPlayer 隐私政策页面，说明本地文件、远程服务账号、历史记录与反馈联系相关的数据处理方式。" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body data-page="privacy">
+    <div class="site-backdrop" aria-hidden="true">
+      <span class="backdrop-orb orb-b"></span>
+      <span class="backdrop-orb orb-c"></span>
+      <span class="backdrop-grid"></span>
+    </div>
+
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="./index.html">GenPlayer</a>
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">G</span>
+          <span>GenPlayer</span>
+        </a>
         <nav class="nav-links">
           <a href="./index.html" data-i18n="nav.home">首页</a>
           <a href="./privacy.html" data-i18n="nav.privacy">隐私政策</a>
@@ -23,36 +32,87 @@
       </div>
     </header>
 
-    <main class="container page-main legal-page">
-      <div class="page-header">
-        <span class="eyebrow" data-i18n="privacyPage.eyebrow">Privacy Policy</span>
-        <h1 data-i18n="privacyPage.title">GenPlayer 隐私政策</h1>
-        <p data-i18n="privacyPage.updated">最后更新：2026-03-20</p>
-      </div>
-
-      <section class="card prose-block">
-        <h2 data-i18n="privacyPage.section1Title">1. 我们处理哪些信息</h2>
-        <p data-i18n="privacyPage.section1Body"></p>
+    <main class="page-main page-shell">
+      <section class="container">
+        <div class="card page-hero-card reveal-on-scroll">
+          <div class="page-hero-copy">
+            <span class="eyebrow" data-i18n="privacyPage.eyebrow">Privacy Policy</span>
+            <h1 data-i18n="privacyPage.title">GenPlayer 隐私政策</h1>
+            <p class="lead" data-i18n="privacyPage.updated">最后更新：2026-03-20</p>
+          </div>
+          <div class="page-hero-aside">
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="privacyPage.stat1Label">Data direction</span>
+              <strong data-i18n="privacyPage.stat1Value">Local-first media workflows</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="privacyPage.stat2Label">Sensitive credentials</span>
+              <strong data-i18n="privacyPage.stat2Value">Device-side secure storage</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="privacyPage.stat3Label">Support contact</span>
+              <strong data-i18n="privacyPage.stat3Value">Email-based troubleshooting</strong>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="card prose-block">
-        <h2 data-i18n="privacyPage.section2Title">2. 本地文件与远程服务连接</h2>
-        <p data-i18n="privacyPage.section2Body"></p>
+      <section class="container">
+        <div class="privacy-summary-grid">
+          <article class="card summary-card reveal-on-scroll">
+            <span class="card-kicker" data-i18n="privacyPage.summary1Kicker">Local First</span>
+            <h2 data-i18n="privacyPage.summary1Title">本地文件处理优先在设备侧完成</h2>
+            <p data-i18n="privacyPage.summary1Body">GenPlayer 的核心能力围绕本地访问、远程连接和播放体验展开，不以收集用户内容为产品前提。</p>
+          </article>
+          <article class="card summary-card reveal-on-scroll delay-1">
+            <span class="card-kicker" data-i18n="privacyPage.summary2Kicker">Secure Handling</span>
+            <h2 data-i18n="privacyPage.summary2Title">敏感信息通过更安全的方式处理</h2>
+            <p data-i18n="privacyPage.summary2Body">服务器凭据、访问令牌和类似敏感信息应通过设备侧安全存储方案保管，而不是明文公开暴露。</p>
+          </article>
+          <article class="card summary-card reveal-on-scroll delay-2">
+            <span class="card-kicker" data-i18n="privacyPage.summary3Kicker">User Control</span>
+            <h2 data-i18n="privacyPage.summary3Title">历史、收藏和联系信息可由用户主动控制</h2>
+            <p data-i18n="privacyPage.summary3Body">你可以在应用内删除本地记录，也可以通过支持邮箱联系更新或删除主动提交的反馈信息。</p>
+          </article>
+        </div>
       </section>
 
-      <section class="card prose-block">
-        <h2 data-i18n="privacyPage.section3Title">3. 历史记录、收藏与个性化功能</h2>
-        <p data-i18n="privacyPage.section3Body"></p>
-      </section>
+      <section class="container legal-layout">
+        <div class="legal-main">
+          <section class="card prose-block reveal-on-scroll">
+            <h2 data-i18n="privacyPage.section1Title">1. 我们处理哪些信息</h2>
+            <p data-i18n="privacyPage.section1Body"></p>
+          </section>
 
-      <section class="card prose-block">
-        <h2 data-i18n="privacyPage.section4Title">4. 反馈与联系信息</h2>
-        <p data-i18n="privacyPage.section4Body"></p>
-      </section>
+          <section class="card prose-block reveal-on-scroll delay-1">
+            <h2 data-i18n="privacyPage.section2Title">2. 本地文件与远程服务连接</h2>
+            <p data-i18n="privacyPage.section2Body"></p>
+          </section>
 
-      <section class="card prose-block">
-        <h2 data-i18n="privacyPage.section5Title">5. 你的权利</h2>
-        <p data-i18n="privacyPage.section5Body"></p>
+          <section class="card prose-block reveal-on-scroll delay-2">
+            <h2 data-i18n="privacyPage.section3Title">3. 历史记录、收藏与个性化功能</h2>
+            <p data-i18n="privacyPage.section3Body"></p>
+          </section>
+
+          <section class="card prose-block reveal-on-scroll">
+            <h2 data-i18n="privacyPage.section4Title">4. 反馈与联系信息</h2>
+            <p data-i18n="privacyPage.section4Body"></p>
+          </section>
+
+          <section class="card prose-block reveal-on-scroll delay-1">
+            <h2 data-i18n="privacyPage.section5Title">5. 你的权利</h2>
+            <p data-i18n="privacyPage.section5Body"></p>
+          </section>
+        </div>
+
+        <aside class="legal-side reveal-on-scroll delay-2">
+          <div class="card legal-side-card">
+            <span class="eyebrow" data-i18n="privacyPage.sideEyebrow">Need support?</span>
+            <h2 data-i18n="privacyPage.sideTitle">对隐私实践或审核信息有疑问？</h2>
+            <p data-i18n="privacyPage.sideBody">如果你需要确认支持渠道、隐私页面用途或上架信息，可以直接前往支持与反馈页联系我们。</p>
+            <a class="button primary" href="./feedback.html" data-i18n="privacyPage.sideCta">前往支持页面</a>
+          </div>
+        </aside>
       </section>
     </main>
 

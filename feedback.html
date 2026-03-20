@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GenPlayer — Support & Feedback</title>
+    <title>GenPlayer - Support &amp; Feedback</title>
     <meta name="description" content="GenPlayer 问题反馈与支持页面，提供联系邮箱、反馈建议与常见问题说明。" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body data-page="feedback">
+    <div class="site-backdrop" aria-hidden="true">
+      <span class="backdrop-orb orb-a"></span>
+      <span class="backdrop-orb orb-c"></span>
+      <span class="backdrop-grid"></span>
+    </div>
+
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="./index.html">GenPlayer</a>
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">G</span>
+          <span>GenPlayer</span>
+        </a>
         <nav class="nav-links">
           <a href="./index.html" data-i18n="nav.home">首页</a>
           <a href="./privacy.html" data-i18n="nav.privacy">隐私政策</a>
@@ -23,55 +32,104 @@
       </div>
     </header>
 
-    <main class="container page-main feedback-page">
-      <div class="page-header">
-        <span class="eyebrow" data-i18n="feedbackPage.eyebrow">Support & Feedback</span>
-        <h1 data-i18n="feedbackPage.title">问题反馈与支持</h1>
-        <p data-i18n="feedbackPage.description">如果你在使用 GenPlayer 时遇到问题，欢迎通过下方方式联系。</p>
-      </div>
-
-      <div class="grid two-columns feedback-grid">
-        <section class="card prose-block">
-          <h2 data-i18n="feedbackPage.contactTitle">联系渠道</h2>
-          <p data-i18n="feedbackPage.contactBody"></p>
-          <a class="button primary" id="emailLink" href="mailto:support@genplayer.app">support@genplayer.app</a>
-        </section>
-
-        <section class="card prose-block">
-          <h2 data-i18n="feedbackPage.reviewTitle">iOS 审核与支持建议</h2>
-          <p data-i18n="feedbackPage.reviewBody"></p>
-        </section>
-      </div>
-
-      <section class="card feedback-form-card">
-        <div class="section-heading left">
-          <span class="eyebrow" data-i18n="feedbackPage.formEyebrow">Static Mail Form</span>
-          <h2 data-i18n="feedbackPage.formTitle">使用静态表单生成反馈邮件</h2>
-          <p data-i18n="feedbackPage.formBody">此表单不会将数据发送到服务器，而是为你自动生成一封邮件内容。</p>
+    <main class="page-main page-shell">
+      <section class="container">
+        <div class="card page-hero-card reveal-on-scroll">
+          <div class="page-hero-copy">
+            <span class="eyebrow" data-i18n="feedbackPage.eyebrow">Support &amp; Feedback</span>
+            <h1 data-i18n="feedbackPage.title">问题反馈与支持</h1>
+            <p class="lead" data-i18n="feedbackPage.description">如果你在使用 GenPlayer 时遇到问题，欢迎通过下方方式联系。</p>
+          </div>
+          <div class="page-hero-aside">
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat1Label">Preferred channel</span>
+              <strong data-i18n="feedbackPage.stat1Value">Email support</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat2Label">Best with</span>
+              <strong data-i18n="feedbackPage.stat2Value">Device info + repro steps</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat3Label">Works for</span>
+              <strong data-i18n="feedbackPage.stat3Value">Bug, feature, review communication</strong>
+            </div>
+          </div>
         </div>
-        <form id="feedbackForm" class="feedback-form">
-          <label>
-            <span data-i18n="feedbackPage.formEmail">你的邮箱</span>
-            <input type="email" name="email" placeholder="name@example.com" />
-          </label>
-          <label>
-            <span data-i18n="feedbackPage.formTopic">问题类型</span>
-            <select name="topic">
-              <option value="bug" data-i18n="feedbackPage.topicBug">Bug 反馈</option>
-              <option value="feature" data-i18n="feedbackPage.topicFeature">功能建议</option>
-              <option value="review" data-i18n="feedbackPage.topicReview">审核沟通</option>
-            </select>
-          </label>
-          <label>
-            <span data-i18n="feedbackPage.formDevice">设备/系统信息</span>
-            <input type="text" name="device" placeholder="iPhone / iOS version" />
-          </label>
-          <label>
-            <span data-i18n="feedbackPage.formMessage">详细说明</span>
-            <textarea name="message" rows="7" placeholder="Describe your issue..."></textarea>
-          </label>
-          <button class="button primary" type="submit" data-i18n="feedbackPage.formSubmit">生成反馈邮件</button>
-        </form>
+      </section>
+
+      <section class="container support-overview">
+        <div class="grid two-columns feedback-grid">
+          <section class="card prose-block reveal-on-scroll">
+            <div class="card-heading">
+              <span class="card-kicker" data-i18n="feedbackPage.contactKicker">Contact</span>
+              <h2 data-i18n="feedbackPage.contactTitle">联系渠道</h2>
+            </div>
+            <p data-i18n="feedbackPage.contactBody"></p>
+            <a class="button primary" id="emailLink" href="mailto:support@genplayer.app">support@genplayer.app</a>
+          </section>
+
+          <section class="card prose-block reveal-on-scroll delay-1">
+            <div class="card-heading">
+              <span class="card-kicker" data-i18n="feedbackPage.reviewKicker">For App Review</span>
+              <h2 data-i18n="feedbackPage.reviewTitle">iOS 审核与支持建议</h2>
+            </div>
+            <p data-i18n="feedbackPage.reviewBody"></p>
+          </section>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="card feedback-split-card reveal-on-scroll">
+          <div class="feedback-info-panel">
+            <span class="eyebrow" data-i18n="feedbackPage.formEyebrow">Static Mail Form</span>
+            <h2 data-i18n="feedbackPage.formTitle">使用静态表单生成反馈邮件</h2>
+            <p data-i18n="feedbackPage.formBody">此表单不会将数据发送到服务器，而是为你自动生成一封邮件内容。</p>
+
+            <div class="feedback-tips">
+              <div class="feedback-tip">
+                <strong data-i18n="feedbackPage.tip1Title">描述复现步骤</strong>
+                <span data-i18n="feedbackPage.tip1Body">尽量说明媒体来源、触发路径和期望行为，便于更快定位问题。</span>
+              </div>
+              <div class="feedback-tip">
+                <strong data-i18n="feedbackPage.tip2Title">附上设备信息</strong>
+                <span data-i18n="feedbackPage.tip2Body">机型、系统版本、网络环境与媒体来源类型都很有帮助。</span>
+              </div>
+              <div class="feedback-tip">
+                <strong data-i18n="feedbackPage.tip3Title">静态站点也能使用</strong>
+                <span data-i18n="feedbackPage.tip3Body">表单不会保存到服务器，只会帮你生成一封预填好的邮件。</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="feedbackForm" class="feedback-form">
+            <label>
+              <span data-i18n="feedbackPage.formEmail">你的邮箱</span>
+              <input type="email" name="email" placeholder="name@example.com" data-i18n-placeholder="feedbackPage.formEmailPlaceholder" />
+            </label>
+            <label>
+              <span data-i18n="feedbackPage.formTopic">问题类型</span>
+              <select name="topic">
+                <option value="bug" data-i18n="feedbackPage.topicBug">Bug 反馈</option>
+                <option value="feature" data-i18n="feedbackPage.topicFeature">功能建议</option>
+                <option value="review" data-i18n="feedbackPage.topicReview">审核沟通</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="feedbackPage.formDevice">设备/系统信息</span>
+              <input type="text" name="device" placeholder="iPhone / iOS version" data-i18n-placeholder="feedbackPage.formDevicePlaceholder" />
+            </label>
+            <label>
+              <span data-i18n="feedbackPage.formMessage">详细说明</span>
+              <textarea
+                name="message"
+                rows="8"
+                placeholder="Describe your issue..."
+                data-i18n-placeholder="feedbackPage.formMessagePlaceholder"
+              ></textarea>
+            </label>
+            <button class="button primary" type="submit" data-i18n="feedbackPage.formSubmit">生成反馈邮件</button>
+          </form>
+        </div>
       </section>
     </main>
 

@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GenPlayer — Page Not Found</title>
+    <title>GenPlayer - Page Not Found</title>
     <meta name="description" content="GenPlayer 页面不存在时的兜底页面，帮助用户返回首页、隐私政策或支持页面。" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body data-page="not-found">
+    <div class="site-backdrop" aria-hidden="true">
+      <span class="backdrop-orb orb-a"></span>
+      <span class="backdrop-orb orb-b"></span>
+      <span class="backdrop-grid"></span>
+    </div>
+
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="./index.html">GenPlayer</a>
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">G</span>
+          <span>GenPlayer</span>
+        </a>
         <nav class="nav-links">
           <a href="./index.html" data-i18n="nav.home">首页</a>
           <a href="./privacy.html" data-i18n="nav.privacy">隐私政策</a>
@@ -23,14 +32,16 @@
       </div>
     </header>
 
-    <main class="container page-main not-found-page">
-      <section class="card status-card">
-        <span class="eyebrow" data-i18n="notFoundPage.eyebrow">Page Not Found</span>
-        <h1 data-i18n="notFoundPage.title">这个页面不存在，或者已经移动。</h1>
-        <p class="lead" data-i18n="notFoundPage.body">你可以返回首页继续浏览，或前往隐私政策和问题反馈页面。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="./index.html" data-i18n="notFoundPage.primaryCta">返回首页</a>
-          <a class="button secondary" href="./feedback.html" data-i18n="notFoundPage.secondaryCta">问题反馈</a>
+    <main class="page-main page-shell not-found-page">
+      <section class="container">
+        <div class="card status-card modern-status-card reveal-on-scroll">
+          <span class="eyebrow" data-i18n="notFoundPage.eyebrow">Page Not Found</span>
+          <h1 data-i18n="notFoundPage.title">这个页面不存在，或者已经移动。</h1>
+          <p class="lead" data-i18n="notFoundPage.body">你可以返回首页继续浏览，或前往隐私政策和问题反馈页面。</p>
+          <div class="hero-actions centered">
+            <a class="button primary" href="./index.html" data-i18n="notFoundPage.primaryCta">返回首页</a>
+            <a class="button secondary" href="./feedback.html" data-i18n="notFoundPage.secondaryCta">问题反馈</a>
+          </div>
         </div>
       </section>
     </main>

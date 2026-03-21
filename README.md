@@ -49,7 +49,7 @@ python3 -m http.server 8080 --directory website
 当前仓库已确定使用的公开官网仓库：
 
 - 仓库：`fugary/gen-player-pages`
-- 预计访问地址：[https://fugary.github.io/gen-player-pages/](https://fugary.github.io/gen-player-pages/)
+- 预计访问地址：[https://genplayer.fugary.com/](https://genplayer.fugary.com/)
 
 ### 主仓库需要配置的内容
 
@@ -83,9 +83,9 @@ python3 -m http.server 8080 --directory website
 
 对于当前配置，发布地址将是：
 
-- 首页：[https://fugary.github.io/gen-player-pages/](https://fugary.github.io/gen-player-pages/)
-- 隐私政策：[https://fugary.github.io/gen-player-pages/privacy.html](https://fugary.github.io/gen-player-pages/privacy.html)
-- 问题反馈：[https://fugary.github.io/gen-player-pages/feedback.html](https://fugary.github.io/gen-player-pages/feedback.html)
+- 首页：[https://genplayer.fugary.com/](https://genplayer.fugary.com/)
+- 隐私政策：[https://genplayer.fugary.com/privacy.html](https://genplayer.fugary.com/privacy.html)
+- 问题反馈：[https://genplayer.fugary.com/feedback.html](https://genplayer.fugary.com/feedback.html)
 
 ## 上线前需要改的配置
 

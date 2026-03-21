@@ -329,6 +329,17 @@ body[data-theme='dark'] .site-header {
   z-index: 1;
 }
 
+.hero-copy {
+  max-width: 38rem;
+}
+
+.hero-copy h1 {
+  max-width: 9.2em;
+  font-size: clamp(3.1rem, 6vw, 5.15rem);
+  line-height: 1.02;
+  margin-bottom: 18px;
+}
+
 .page-hero-copy > :first-child,
 .card-heading > :first-child,
 .feedback-info-panel > :first-child,
@@ -1102,6 +1113,10 @@ body[data-theme='dark'] .feedback-form select {
   .page-hero-card {
     flex-direction: column;
   }
+
+  .hero-copy {
+    max-width: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1135,5 +1150,11 @@ body[data-theme='dark'] .feedback-form select {
 
   .button {
     width: 100%;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+    font-size: clamp(2.2rem, 12vw, 3.45rem);
+    line-height: 1.05;
   }
 }

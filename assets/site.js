@@ -1,4 +1,5 @@
 const SUPPORT_EMAIL = ['fufuguo', 'icloud.com'].join('@');
+const queryParams = new URLSearchParams(window.location.search);
 
 const dictionaries = {
   'zh-CN': {
@@ -494,13 +495,33 @@ const flatten = (obj, prefix = '') =>
     return acc;
   }, {});
 
+const normalizeLanguage = (value) => {
+  if (!value) return null;
+  const normalized = value.toLowerCase();
+  if (normalized.startsWith('zh')) return 'zh-CN';
+  if (normalized.startsWith('en')) return 'en';
+  return dictionaries[value] ? value : null;
+};
+
+const getQueryLanguage = () => normalizeLanguage(queryParams.get('lang') || queryParams.get('language'));
+
+const getQueryTheme = () => {
+  const value = (queryParams.get('theme') || '').toLowerCase();
+  return value === 'light' || value === 'dark' ? value : null;
+};
+
 const getPreferredLanguage = () => {
+  const queryLanguage = getQueryLanguage();
+  if (queryLanguage) return queryLanguage;
   const saved = localStorage.getItem('genplayer-language');
-  if (saved && dictionaries[saved]) return saved;
-  return navigator.language && navigator.language.toLowerCase().startsWith('zh') ? 'zh-CN' : 'en';
+  const normalizedSaved = normalizeLanguage(saved);
+  if (normalizedSaved) return normalizedSaved;
+  return normalizeLanguage(navigator.language) || 'en';
 };
 
 const getPreferredTheme = () => {
+  const queryTheme = getQueryTheme();
+  if (queryTheme) return queryTheme;
   const saved = localStorage.getItem('genplayer-theme');
   if (saved === 'light' || saved === 'dark') return saved;
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -526,6 +547,9 @@ const applyLanguage = (language) => {
 };
 
 const applyTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.style.colorScheme = theme;
+  document.documentElement.style.backgroundColor = theme === 'dark' ? '#070812' : '#f4efe8';
   document.body.setAttribute('data-theme', theme);
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀︎' : '◐';

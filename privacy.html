@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gen Player - Privacy Policy</title>
     <meta name="description" content="Gen Player 隐私政策页面，说明本地文件、远程服务账号、历史记录与反馈联系相关的数据处理方式。" />
-    <link rel="stylesheet" href="./assets/styles.css?v=20260321h" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var theme = (params.get('theme') || localStorage.getItem('genplayer-theme') || '').toLowerCase();
+        var lang = (params.get('lang') || localStorage.getItem('genplayer-language') || '').toLowerCase();
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (lang.indexOf('zh') === 0) {
+          document.documentElement.lang = 'zh-CN';
+        } else if (lang.indexOf('en') === 0) {
+          document.documentElement.lang = 'en';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        document.documentElement.style.backgroundColor = theme === 'dark' ? '#070812' : '#f4efe8';
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles.css?v=20260321i" />
   </head>
   <body data-page="privacy">
     <div class="site-backdrop" aria-hidden="true">
@@ -177,6 +195,6 @@
       </div>
     </footer>
 
-    <script src="./assets/site.js?v=20260321g"></script>
+    <script src="./assets/site.js?v=20260321i"></script>
   </body>
 </html>

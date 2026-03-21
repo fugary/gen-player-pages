@@ -1,4 +1,4 @@
-const SUPPORT_EMAIL = 'support@genplayer.app';
+const SUPPORT_EMAIL = ['fufuguo', 'icloud.com'].join('@');
 
 const dictionaries = {
   'zh-CN': {
@@ -14,28 +14,28 @@ const dictionaries = {
       eyebrow: '本地与远程一体化媒体中心',
       spotlight: '为家庭媒体库和移动设备设计的现代播放器体验',
       title: '把文件、媒体库与播放体验整合成一个更统一的入口。',
-      description: 'GenPlayer 将本地文件管理、SMB / WebDAV 网络访问、Jellyfin / Emby 媒体库与 VLC 播放核心整合到一套更完整的体验里。',
+      description: 'Gen Player 将本地文件管理、SMB / WebDAV 网络访问、Jellyfin / Emby 媒体库与 VLC 播放核心整合到一套更完整的体验里。',
       primaryCta: '查看核心功能',
       secondaryCta: '获取支持与反馈',
       proof1: '本地文件 + 远程服务统一管理',
       proof2: '支持离线关联播放与继续观看',
       proof3: '面向 iPhone / iPad / tvOS',
-      note1Label: 'Now Playing',
+      note1Label: '当前播放',
       note1Title: '离线优先，缺失时再回退流媒体',
-      note2Label: 'Next Focus',
+      note2Label: '下一步重点',
       note2Title: '多端同步、下载中心深化、离线关联播放',
-      stageBadge: 'Unified Dashboard',
-      stageTag: 'Local + Remote',
+      stageBadge: '统一面板',
+      stageTag: '本地 + 远程',
       stageTitle: '从文件整理到海报墙浏览，再到播放器接力，体验保持连贯。',
       stageBody: '针对本地媒体、家庭 NAS 与自建媒体库做统一交互设计，减少在多个 App 之间来回切换。',
       stagePill1: 'SMB / WebDAV',
       stagePill2: 'Jellyfin / Emby',
-      stagePill3: 'VLC Playback Core',
-      stageMini1Title: 'Continue Watching',
+      stagePill3: 'VLC 播放内核',
+      stageMini1Title: '继续观看',
       stageMini1Body: '历史、收藏和库详情之间跳转一致',
-      stageMini2Title: 'Download Center',
+      stageMini2Title: '下载中心',
       stageMini2Body: '离线文件优先命中，缺失时自动回退流媒体',
-      stageMini3Title: 'Privacy by Design',
+      stageMini3Title: '隐私设计',
       stageMini3Body: '敏感凭据走安全存储，不把隐私留在表面'
     },
     metrics: {
@@ -55,8 +55,8 @@ const dictionaries = {
     product: {
       eyebrow: '产品定位',
       title: '不是只会“打开文件”，而是把媒体管理、浏览和播放连接起来。',
-      description: '官网这次按现代产品站点的节奏重排了信息层次，让 GenPlayer 的价值主张在首屏就更清楚。',
-      card1Kicker: 'Why GenPlayer',
+      description: '官网这次按现代产品站点的节奏重排了信息层次，让 Gen Player 的价值主张在首屏就更清楚。',
+      card1Kicker: '为什么是 Gen Player',
       card1Title: '统一入口，而不是功能堆叠。',
       card1Body: '在同一个应用里处理本地文件、远程协议连接和媒体库浏览，让文件管理、海报墙与播放器之间不再断裂。',
       point1Title: '更少切换',
@@ -67,7 +67,7 @@ const dictionaries = {
       point3Body: '围绕“找到内容、继续播放、离线回看”来设计页面关系。'
     },
     flow: {
-      eyebrow: 'Experience Flow',
+      eyebrow: '体验链路',
       title: '把典型使用路径做成更顺手的链路。',
       step1Title: '连接你的媒体来源',
       step1Body: '支持本地文件、家庭 NAS、WebDAV 和 Jellyfin / Emby 媒体服务器。',
@@ -91,10 +91,10 @@ const dictionaries = {
       historyTitle: '历史与收藏',
       historyBody: '统一记录本地与远程媒体的历史进度与收藏信息，帮助用户从中断位置快速继续。',
       privacyTitle: '隐私与安全',
-      privacyBody: '支持应用锁、生物识别与隐私模式，敏感凭据通过安全存储方案处理。'
+      privacyBody: '当前没有自建服务器，主要数据在客户设备本地处理，敏感凭据通过安全存储方案保护。'
     },
     download: {
-      eyebrow: 'Download Center',
+      eyebrow: '下载中心',
       title: '下载中心正在从 MVP 进化为“离线关联播放”的核心能力。',
       body: '这也是当前阶段最重要的扩展方向之一。官网把这部分单独突出出来，让产品路线和实际能力更清晰。',
       primaryCta: '告诉我们你的使用场景',
@@ -113,24 +113,24 @@ const dictionaries = {
       webdav: '兼容 Alist 与多种 WebDAV 服务',
       jellyfin: '媒体库浏览、详情与历史关联',
       emby: '海报墙浏览与远程播放协同',
-      local: '文件 App、照片导入与 On My iPhone',
+      local: '文件、照片导入与“在我的 iPhone 上”',
       vlc: '多格式播放、字幕和音轨兼容'
     },
     scenarios: {
       eyebrow: '使用场景',
       title: '既适合个人影音整理，也适合家庭服务器和移动端连续播放。',
-      case1Label: 'Local Workflow',
+      case1Label: '本地工作流',
       case1Title: '本地媒体整理',
       case1Body: '整理 iPhone / iPad 中的视频、音频和图片，并通过统一播放器继续观看。',
-      case2Label: 'Home Server',
+      case2Label: '家庭服务器',
       case2Title: '家庭 NAS / 私有云访问',
       case2Body: '连接 SMB 或 WebDAV 服务，在移动端快速查看和播放远程文件。',
-      case3Label: 'Library Flow',
+      case3Label: '媒体库链路',
       case3Title: '媒体库连续观看',
       case3Body: '从 Jellyfin / Emby 中浏览海报墙、定位剧集详情，并回到你的历史进度。'
     },
     roadmap: {
-      eyebrow: 'Roadmap',
+      eyebrow: '路线图',
       title: '继续推进多端同步、下载中心和更完整的离线关联播放。',
       body: '当前重点方向包括下载中心深化、历史/收藏/服务器数据一致性，以及未来的同步与扩展能力。',
       primaryCta: '提交问题反馈',
@@ -141,7 +141,7 @@ const dictionaries = {
       kicker: '应用数据与隐私说明',
       title: '隐私政策',
       updated: '最后更新：2026-03-20',
-      description: '这页只说明 GenPlayer 在本地媒体、远程服务连接、历史收藏与支持沟通中的必要数据处理方式，不引入脱离产品实际的额外承诺。',
+      description: '这页只说明 Gen Player 在本地媒体、远程服务连接、历史收藏与支持沟通中的必要数据处理方式。当前没有自建服务器，数据以客户设备本地处理和保存为主。',
       proof1: '本地优先的数据方向',
       proof2: '敏感信息走安全存储',
       proof3: '历史与收藏由用户控制',
@@ -162,7 +162,7 @@ const dictionaries = {
       summary1Badge: '本地',
       summary1Kicker: '本地优先',
       summary1Title: '本地文件处理优先在设备侧完成',
-      summary1Body: 'GenPlayer 的核心能力围绕本地访问、远程连接和播放体验展开，不以收集用户内容为产品前提。',
+      summary1Body: 'Gen Player 的核心能力围绕本地访问、远程连接和播放体验展开，不以收集用户内容为产品前提；当前没有自建服务器，主要数据处理发生在客户本地设备。',
       summary2Badge: '安全',
       summary2Kicker: '安全处理',
       summary2Title: '敏感信息通过更安全的方式处理',
@@ -172,18 +172,18 @@ const dictionaries = {
       summary3Title: '历史、收藏和联系信息可由用户主动控制',
       summary3Body: '你可以在应用内删除本地记录，也可以通过支持邮箱联系更新或删除主动提交的反馈信息。',
       section1Title: '1. 我们处理哪些信息',
-      section1Body: 'GenPlayer 的核心能力以本地文件访问、远程媒体连接和播放体验为主。应用可能处理你主动提供的信息，例如服务器地址、用户名、访问令牌、播放历史、收藏状态，以及你主动发起反馈时填写的联系方式。',
+      section1Body: 'Gen Player 的核心能力以本地文件访问、远程媒体连接和播放体验为主。当前没有自建服务器，应用主要处理你在设备本地使用时产生或主动提供的信息，例如服务器地址、用户名、访问令牌、播放历史、收藏状态，以及你主动发起反馈时填写的联系方式。',
       section2Title: '2. 本地文件与远程服务连接',
-      section2Body: '本地文件内容主要在你的设备上处理。对于 SMB、WebDAV、Jellyfin、Emby 等远程服务，应用会在你主动配置后使用对应凭据进行连接。敏感凭据应通过安全存储方案保存在设备侧，不用于公开展示或出售。',
+      section2Body: '本地文件内容主要在你的设备上处理。对于 SMB、WebDAV、Jellyfin、Emby 等远程服务，应用会在你主动配置后使用对应凭据进行连接。当前没有自建服务器承接这些数据，敏感凭据应通过安全存储方案保存在设备侧，不用于公开展示或出售。',
       section3Title: '3. 历史记录、收藏与个性化功能',
       section3Body: '为了实现继续播放、历史记录、收藏和离线关联等功能，应用会在本地保存必要的媒体标识、进度与偏好设置。你可以在应用内关闭部分历史能力，或删除相关记录。',
       section4Title: '4. 反馈与联系信息',
-      section4Body: '当你通过反馈页面、邮件或其他支持渠道联系我们时，我们可能收到你主动提交的邮箱地址、设备信息和问题描述，这些信息仅用于问题排查、用户支持与审核沟通。',
+      section4Body: '当你通过反馈页面、邮件或其他支持渠道联系我们时，我们可能收到你主动提交的邮箱地址、设备信息和问题描述，这些信息仅用于问题排查与用户支持。',
       section5Title: '5. 你的权利',
       section5Body: '你可以请求更新或删除你主动提交的反馈信息，也可以在应用内清理历史/收藏等本地记录。若你对隐私实践有疑问，请通过支持邮箱联系我们。',
       sideEyebrow: '需要帮助？',
-      sideTitle: '对隐私实践或审核信息有疑问？',
-      sideBody: '如果你需要确认支持渠道、隐私页面用途或上架信息，可以直接前往支持与反馈页联系我们。',
+      sideTitle: '对隐私实践或数据处理有疑问？',
+      sideBody: '如果你想确认本地数据处理方式、支持联系流程或这页政策的适用范围，可以直接前往支持与反馈页联系我们。',
       sideCta: '前往支持页面',
       quickFactsKicker: '覆盖范围',
       quickFactsTitle: '这页覆盖的范围',
@@ -195,36 +195,33 @@ const dictionaries = {
       quickFact3Body: '解释通过邮箱或反馈页主动提交信息时的处理用途。'
     },
     feedbackPage: {
-      eyebrow: 'Support & Feedback',
+      eyebrow: '问题反馈与支持',
       title: '问题反馈与支持',
-      description: '如果你在使用 GenPlayer 时遇到问题，欢迎通过下方方式联系。',
-      stat1Label: 'Preferred channel',
-      stat1Value: '邮箱支持',
-      stat2Label: 'Best with',
+      description: '如果你在使用 Gen Player 时遇到问题，欢迎通过下方方式联系。',
+      stat1Label: '首选渠道',
+      stat1Value: '反馈表单',
+      stat2Label: '建议附上',
       stat2Value: '设备信息 + 复现步骤',
-      stat3Label: 'Works for',
-      stat3Value: 'Bug、建议、审核沟通',
-      contactKicker: 'Contact',
+      stat3Label: '适用场景',
+      stat3Value: '问题反馈、功能建议、使用咨询',
+      contactKicker: '联系渠道',
       contactTitle: '联系渠道',
-      contactBody: '推荐使用支持邮箱提交问题，并附上设备型号、系统版本、媒体来源类型（本地 / SMB / WebDAV / Jellyfin / Emby）以及复现步骤。',
-      reviewKicker: 'For App Review',
-      reviewTitle: 'iOS 审核与支持建议',
-      reviewBody: '对 iOS 上架来说，隐私政策页面通常应准备好；支持/反馈页面虽不一定是单独法规要求，但作为公开的 Support URL 非常有价值，也有利于审核人员快速理解联系渠道。',
-      formEyebrow: 'Static Mail Form',
-      formTitle: '使用静态表单生成反馈邮件',
-      formBody: '此表单不会将数据发送到服务器，而是为你自动生成一封邮件内容。',
+      contactBody: '我们没有自建服务器来托管你的媒体内容或保存反馈表单。这个页面只帮助你在本地整理一封待发送邮件；主要数据仍在你的设备上处理和保存，敏感信息应由设备安全存储保护。',
+      formEyebrow: '静态邮件表单',
+      formTitle: '使用本地表单生成联系邮件',
+      formBody: '当前页面不会把内容提交到我们的服务器。你填写的信息只会在当前设备本地用于生成一封待发送邮件，由你的邮件客户端决定是否发出。',
       tip1Title: '描述复现步骤',
       tip1Body: '尽量说明媒体来源、触发路径和期望行为，便于更快定位问题。',
       tip2Title: '附上设备信息',
       tip2Body: '机型、系统版本、网络环境与媒体来源类型都很有帮助。',
       tip3Title: '静态站点也能使用',
-      tip3Body: '表单不会保存到服务器，只会帮你生成一封预填好的邮件。',
+      tip3Body: '网页本身不会保存提交记录，只会在本地生成一封预填好的邮件。',
       formEmail: '你的邮箱',
-      formEmailPlaceholder: 'name@example.com',
+      formEmailPlaceholder: 'you@example.com',
       formTopic: '问题类型',
       topicBug: 'Bug 反馈',
       topicFeature: '功能建议',
-      topicReview: '审核沟通',
+      topicSupport: '使用咨询',
       formDevice: '设备/系统信息',
       formDevicePlaceholder: '例如：iPhone 15 Pro / iOS 18 / Jellyfin',
       formMessage: '详细说明',
@@ -232,7 +229,7 @@ const dictionaries = {
       formSubmit: '生成反馈邮件'
     },
     notFoundPage: {
-      eyebrow: 'Page Not Found',
+      eyebrow: '页面不存在',
       title: '这个页面不存在，或者已经移动。',
       body: '你可以返回首页继续浏览，或前往隐私政策和问题反馈页面。',
       primaryCta: '返回首页',
@@ -257,7 +254,7 @@ const dictionaries = {
       eyebrow: 'A unified media center for local and remote libraries',
       spotlight: 'A more modern playback experience for home media libraries and mobile devices',
       title: 'Bring files, libraries, and playback together in one clearer experience.',
-      description: 'GenPlayer combines local file management, SMB / WebDAV access, Jellyfin / Emby libraries, and a VLC-powered playback core into one more complete workflow.',
+      description: 'Gen Player combines local file management, SMB / WebDAV access, Jellyfin / Emby libraries, and a VLC-powered playback core into one more complete workflow.',
       primaryCta: 'Explore features',
       secondaryCta: 'Get support',
       proof1: 'Manage local files and remote services together',
@@ -298,8 +295,8 @@ const dictionaries = {
     product: {
       eyebrow: 'Product',
       title: 'More than opening files: it connects media management, browsing, and playback.',
-      description: 'This redesign follows the pacing of modern product sites so GenPlayer explains its value more clearly from the first screen.',
-      card1Kicker: 'Why GenPlayer',
+      description: 'This redesign follows the pacing of modern product sites so Gen Player explains its value more clearly from the first screen.',
+      card1Kicker: 'Why Gen Player',
       card1Title: 'A unified entry point, not a pile of disconnected features.',
       card1Body: 'Handle local files, remote protocol access, and media library browsing in one app so file management, poster walls, and playback no longer feel separate.',
       point1Title: 'Less switching',
@@ -334,7 +331,7 @@ const dictionaries = {
       historyTitle: 'History and favorites',
       historyBody: 'Keep local and remote progress together so users can quickly resume what they were watching.',
       privacyTitle: 'Privacy and security',
-      privacyBody: 'App lock, biometrics, privacy mode, and secure credential handling are part of the product direction.'
+      privacyBody: 'There is no self-hosted application backend; most data stays on the customer device and sensitive credentials are protected with secure storage.'
     },
     download: {
       eyebrow: 'Download Center',
@@ -381,10 +378,10 @@ const dictionaries = {
     },
     privacyPage: {
       eyebrow: 'Privacy Policy',
-      kicker: 'GenPlayer data and privacy overview',
+      kicker: 'Gen Player data and privacy overview',
       title: 'Privacy Policy',
       updated: 'Last updated: March 20, 2026',
-      description: 'This page only explains the necessary data handling around local media, remote service connections, history or favorites, and support communication. It does not make claims beyond the product as it exists today.',
+      description: 'This page explains the necessary data handling around local media, remote service connections, history or favorites, and support communication. There is no self-hosted application backend, and most data is handled or stored on the customer device.',
       proof1: 'Local-first data direction',
       proof2: 'Sensitive data uses secure storage',
       proof3: 'History and favorites stay user-controlled',
@@ -405,7 +402,7 @@ const dictionaries = {
       summary1Badge: 'LF',
       summary1Kicker: 'Local First',
       summary1Title: 'Local file handling is primarily performed on-device',
-      summary1Body: 'GenPlayer centers on local access, remote connectivity, and playback rather than collecting user content as a product requirement.',
+      summary1Body: 'Gen Player centers on local access, remote connectivity, and playback rather than collecting user content as a product requirement. There is no self-hosted application backend collecting this data centrally.',
       summary2Badge: 'SS',
       summary2Kicker: 'Secure Handling',
       summary2Title: 'Sensitive information is handled through safer device-side storage',
@@ -415,18 +412,18 @@ const dictionaries = {
       summary3Title: 'History, favorites, and support details remain under user control',
       summary3Body: 'You can remove local records in the app and contact support to update or delete feedback details you voluntarily submitted.',
       section1Title: '1. Information we process',
-      section1Body: 'GenPlayer focuses on local file access, remote media connectivity, and playback. The app may process information you actively provide, such as server addresses, usernames, access tokens, playback history, favorite states, and contact details you submit through support channels.',
+      section1Body: 'Gen Player focuses on local file access, remote media connectivity, and playback. There is currently no self-hosted application backend, so the app primarily processes information stored locally on your device or entered by you, such as server addresses, usernames, access tokens, playback history, favorite states, and support contact details.',
       section2Title: '2. Local files and remote connections',
-      section2Body: 'Local file content is primarily processed on your device. For SMB, WebDAV, Jellyfin, Emby, and similar services, the app uses credentials only after you configure them. Sensitive credentials should be handled with device-side secure storage and are not intended for public display or resale.',
+      section2Body: 'Local file content is primarily processed on your device. For SMB, WebDAV, Jellyfin, Emby, and similar services, the app uses credentials only after you configure them. There is no self-hosted application backend receiving these credentials; they should remain in device-side secure storage and are not intended for public display or resale.',
       section3Title: '3. History, favorites, and personalization',
       section3Body: 'To support resume playback, history, favorites, and offline-linked experiences, the app stores necessary media identifiers, progress, and preference settings locally. Users can disable some history behaviors or remove related records inside the app.',
       section4Title: '4. Feedback and contact information',
-      section4Body: 'If you contact us through the feedback page, email, or other support channels, we may receive the email address, device details, and issue description that you choose to provide. This information is used only for troubleshooting, support, and review communication.',
+      section4Body: 'If you contact us through the feedback page, email, or other support channels, we may receive the email address, device details, and issue description that you choose to provide. This information is used only for troubleshooting and user support.',
       section5Title: '5. Your choices',
       section5Body: 'You can request updates or deletion of feedback information you voluntarily submit, and you can clear local records such as history and favorites in the app. If you have privacy questions, please contact the support email.',
       sideEyebrow: 'Need support?',
-      sideTitle: 'Questions about privacy or review details?',
-      sideBody: 'If you need to confirm support channels, the purpose of this privacy page, or review-facing information, the support page is the quickest next step.',
+      sideTitle: 'Questions about privacy or data handling?',
+      sideBody: 'If you want to confirm local data handling, support contact flow, or the scope of this policy, the support page is the quickest next step.',
       sideCta: 'Open support page',
       quickFactsKicker: 'Quick facts',
       quickFactsTitle: 'What this page covers',
@@ -440,34 +437,31 @@ const dictionaries = {
     feedbackPage: {
       eyebrow: 'Support & Feedback',
       title: 'Support and feedback',
-      description: 'If you run into issues while using GenPlayer, please reach out through the options below.',
+      description: 'If you run into issues while using Gen Player, please reach out through the options below.',
       stat1Label: 'Preferred channel',
-      stat1Value: 'Email support',
+      stat1Value: 'Contact form',
       stat2Label: 'Best with',
       stat2Value: 'Device info + repro steps',
       stat3Label: 'Works for',
-      stat3Value: 'Bug reports, requests, review communication',
+      stat3Value: 'Bug reports, requests, general support',
       contactKicker: 'Contact',
       contactTitle: 'Contact options',
-      contactBody: 'Email is the recommended support channel. Please include your device model, OS version, media source type (local / SMB / WebDAV / Jellyfin / Emby), and reproduction steps when possible.',
-      reviewKicker: 'For App Review',
-      reviewTitle: 'App Review support guidance',
-      reviewBody: 'A privacy policy URL should generally be ready for iOS distribution. A dedicated support page may not be a standalone legal requirement, but it is highly useful as a public Support URL and helps reviewers understand how users can contact you.',
+      contactBody: 'There is no self-hosted application backend hosting your media or storing submitted forms. This page only helps prepare a support email locally; most data remains processed and stored on your device.',
       formEyebrow: 'Static Mail Form',
-      formTitle: 'Generate a support email from a static form',
-      formBody: 'This form does not send data to a server. It simply generates a prefilled email for the user.',
+      formTitle: 'Generate a contact email from a local form',
+      formBody: 'This page does not submit form data to our server. Your input is only used locally on the current device to prepare a draft email, and your mail client decides whether to send it.',
       tip1Title: 'Describe reproduction steps',
       tip1Body: 'Include the media source, navigation path, and expected behavior whenever possible so issues can be reproduced faster.',
       tip2Title: 'Add device details',
       tip2Body: 'Model, OS version, network context, and source type are all useful clues.',
       tip3Title: 'Still works as a static site',
-      tip3Body: 'Nothing is stored on a server. The page only helps generate a prefilled email.',
+      tip3Body: 'The website does not keep submission records. It only generates a prefilled email locally.',
       formEmail: 'Your email',
-      formEmailPlaceholder: 'name@example.com',
+      formEmailPlaceholder: 'you@example.com',
       formTopic: 'Topic',
       topicBug: 'Bug report',
       topicFeature: 'Feature request',
-      topicReview: 'Review communication',
+      topicSupport: 'General support',
       formDevice: 'Device / OS info',
       formDevicePlaceholder: 'Example: iPhone 15 Pro / iOS 18 / Jellyfin',
       formMessage: 'Details',
@@ -548,9 +542,9 @@ const initializeFeedbackForm = () => {
     const language = localStorage.getItem('genplayer-language') || getPreferredLanguage();
     const isZh = language === 'zh-CN';
     const subjectMap = {
-      bug: isZh ? 'GenPlayer Bug 反馈' : 'GenPlayer Bug Report',
-      feature: isZh ? 'GenPlayer 功能建议' : 'GenPlayer Feature Request',
-      review: isZh ? 'GenPlayer 审核沟通' : 'GenPlayer Review Communication'
+      bug: isZh ? 'Gen Player Bug 反馈' : 'Gen Player Bug Report',
+      feature: isZh ? 'Gen Player 功能建议' : 'Gen Player Feature Request',
+      support: isZh ? 'Gen Player 使用咨询' : 'Gen Player Support Request'
     };
     const topic = formData.get('topic') || 'bug';
     const body = [
@@ -562,13 +556,6 @@ const initializeFeedbackForm = () => {
     const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subjectMap[topic])}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
   });
-};
-
-const initializeSupportEmail = () => {
-  const emailLink = document.getElementById('emailLink');
-  if (!emailLink) return;
-  emailLink.href = `mailto:${SUPPORT_EMAIL}`;
-  emailLink.textContent = SUPPORT_EMAIL;
 };
 
 const initializeRevealObserver = () => {
@@ -615,7 +602,6 @@ const initialize = () => {
   });
 
   initializeFeedbackForm();
-  initializeSupportEmail();
   initializeRevealObserver();
 };
 

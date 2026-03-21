@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GenPlayer - Support &amp; Feedback</title>
-    <meta name="description" content="GenPlayer 问题反馈与支持页面，提供联系邮箱、反馈建议与常见问题说明。" />
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Gen Player - Support &amp; Feedback</title>
+    <meta name="description" content="Gen Player 问题反馈与支持页面，提供反馈表单、提交建议与支持说明。" />
+    <link rel="stylesheet" href="./assets/styles.css?v=20260321h" />
   </head>
   <body data-page="feedback">
     <div class="site-backdrop" aria-hidden="true">
@@ -17,8 +17,8 @@
     <header class="site-header">
       <div class="container nav-shell">
         <a class="brand" href="./index.html">
-          <img class="brand-mark" src="./assets/app-icon.png" alt="GenPlayer app icon" />
-          <span>GenPlayer</span>
+          <img class="brand-mark" src="./assets/app-icon.png" alt="Gen Player app icon" />
+          <span>Gen Player</span>
         </a>
         <nav class="nav-links">
           <a href="./index.html" data-i18n="nav.home">首页</a>
@@ -36,54 +36,40 @@
       <section class="container">
         <div class="card page-hero-card reveal-on-scroll">
           <div class="page-hero-copy">
-            <span class="eyebrow" data-i18n="feedbackPage.eyebrow">Support &amp; Feedback</span>
             <h1 data-i18n="feedbackPage.title">问题反馈与支持</h1>
-            <p class="lead" data-i18n="feedbackPage.description">如果你在使用 GenPlayer 时遇到问题，欢迎通过下方方式联系。</p>
+            <p class="lead" data-i18n="feedbackPage.description">如果你在使用 Gen Player 时遇到问题，欢迎通过下方方式联系。</p>
           </div>
           <div class="page-hero-aside">
             <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="feedbackPage.stat1Label">Preferred channel</span>
-              <strong data-i18n="feedbackPage.stat1Value">Email support</strong>
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat1Label">首选渠道</span>
+              <strong data-i18n="feedbackPage.stat1Value">反馈表单</strong>
             </div>
             <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="feedbackPage.stat2Label">Best with</span>
-              <strong data-i18n="feedbackPage.stat2Value">Device info + repro steps</strong>
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat2Label">建议附上</span>
+              <strong data-i18n="feedbackPage.stat2Value">设备信息 + 复现步骤</strong>
             </div>
             <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="feedbackPage.stat3Label">Works for</span>
-              <strong data-i18n="feedbackPage.stat3Value">Bug, feature, review communication</strong>
+              <span class="mini-stat-label" data-i18n="feedbackPage.stat3Label">适用场景</span>
+              <strong data-i18n="feedbackPage.stat3Value">问题反馈、功能建议、使用咨询</strong>
             </div>
           </div>
         </div>
       </section>
 
       <section class="container support-overview">
-        <div class="grid two-columns feedback-grid">
-          <section class="card prose-block reveal-on-scroll">
-            <div class="card-heading">
-              <span class="card-kicker" data-i18n="feedbackPage.contactKicker">Contact</span>
-              <h2 data-i18n="feedbackPage.contactTitle">联系渠道</h2>
-            </div>
-            <p data-i18n="feedbackPage.contactBody"></p>
-            <a class="button primary" id="emailLink" href="mailto:support@genplayer.app">support@genplayer.app</a>
-          </section>
-
-          <section class="card prose-block reveal-on-scroll delay-1">
-            <div class="card-heading">
-              <span class="card-kicker" data-i18n="feedbackPage.reviewKicker">For App Review</span>
-              <h2 data-i18n="feedbackPage.reviewTitle">iOS 审核与支持建议</h2>
-            </div>
-            <p data-i18n="feedbackPage.reviewBody"></p>
-          </section>
-        </div>
+        <section class="card prose-block reveal-on-scroll">
+          <div class="card-heading">
+            <h2 data-i18n="feedbackPage.contactTitle">联系渠道</h2>
+          </div>
+          <p data-i18n="feedbackPage.contactBody"></p>
+        </section>
       </section>
 
       <section class="container">
         <div class="card feedback-split-card reveal-on-scroll">
           <div class="feedback-info-panel">
-            <span class="eyebrow" data-i18n="feedbackPage.formEyebrow">Static Mail Form</span>
-            <h2 data-i18n="feedbackPage.formTitle">使用静态表单生成反馈邮件</h2>
-            <p data-i18n="feedbackPage.formBody">此表单不会将数据发送到服务器，而是为你自动生成一封邮件内容。</p>
+            <h2 data-i18n="feedbackPage.formTitle">使用本地表单生成联系邮件</h2>
+            <p data-i18n="feedbackPage.formBody">此页面不会把内容提交到服务器，而只会在本地整理一封待发送邮件。</p>
 
             <div class="feedback-tips">
               <div class="feedback-tip">
@@ -96,7 +82,7 @@
               </div>
               <div class="feedback-tip">
                 <strong data-i18n="feedbackPage.tip3Title">静态站点也能使用</strong>
-                <span data-i18n="feedbackPage.tip3Body">表单不会保存到服务器，只会帮你生成一封预填好的邮件。</span>
+                <span data-i18n="feedbackPage.tip3Body">网页本身不会保存提交记录，只会在本地生成一封预填好的邮件。</span>
               </div>
             </div>
           </div>
@@ -104,14 +90,14 @@
           <form id="feedbackForm" class="feedback-form">
             <label>
               <span data-i18n="feedbackPage.formEmail">你的邮箱</span>
-              <input type="email" name="email" placeholder="name@example.com" data-i18n-placeholder="feedbackPage.formEmailPlaceholder" />
+              <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="feedbackPage.formEmailPlaceholder" />
             </label>
             <label>
               <span data-i18n="feedbackPage.formTopic">问题类型</span>
               <select name="topic">
                 <option value="bug" data-i18n="feedbackPage.topicBug">Bug 反馈</option>
                 <option value="feature" data-i18n="feedbackPage.topicFeature">功能建议</option>
-                <option value="review" data-i18n="feedbackPage.topicReview">审核沟通</option>
+                <option value="support" data-i18n="feedbackPage.topicSupport">使用咨询</option>
               </select>
             </label>
             <label>
@@ -135,7 +121,7 @@
 
     <footer class="site-footer">
       <div class="container footer-shell">
-        <p>© <span id="year"></span> GenPlayer</p>
+        <p>© <span id="year"></span> Gen Player</p>
         <div class="footer-links">
           <a href="./index.html" data-i18n="footer.home">首页</a>
           <a href="./privacy.html" data-i18n="footer.privacy">隐私政策</a>
@@ -143,6 +129,6 @@
       </div>
     </footer>
 
-    <script src="./assets/site.js"></script>
+    <script src="./assets/site.js?v=20260321g"></script>
   </body>
 </html>

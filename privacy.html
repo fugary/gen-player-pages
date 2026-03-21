@@ -34,46 +34,91 @@
 
     <main class="page-main page-shell">
       <section class="container">
-        <div class="card page-hero-card reveal-on-scroll">
-          <div class="page-hero-copy">
+        <div class="privacy-hero-grid">
+          <article class="card privacy-intro-card reveal-on-scroll">
             <span class="eyebrow" data-i18n="privacyPage.eyebrow">Privacy Policy</span>
+            <p class="hero-kicker" data-i18n="privacyPage.kicker">Privacy at a glance</p>
             <h1 data-i18n="privacyPage.title">GenPlayer 隐私政策</h1>
             <p class="lead" data-i18n="privacyPage.updated">最后更新：2026-03-20</p>
-          </div>
-          <div class="page-hero-aside">
-            <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="privacyPage.stat1Label">Data direction</span>
-              <strong data-i18n="privacyPage.stat1Value">Local-first media workflows</strong>
+            <p class="privacy-intro-body" data-i18n="privacyPage.description">
+              这页只说明 GenPlayer 在本地媒体、远程服务连接、历史收藏与支持沟通中的必要数据处理方式，不引入脱离产品实际的额外承诺。
+            </p>
+            <div class="hero-proof">
+              <span class="proof-chip" data-i18n="privacyPage.proof1">本地优先的数据方向</span>
+              <span class="proof-chip" data-i18n="privacyPage.proof2">敏感信息走安全存储</span>
+              <span class="proof-chip" data-i18n="privacyPage.proof3">历史与收藏由用户控制</span>
             </div>
-            <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="privacyPage.stat2Label">Sensitive credentials</span>
-              <strong data-i18n="privacyPage.stat2Value">Device-side secure storage</strong>
-            </div>
-            <div class="mini-stat">
-              <span class="mini-stat-label" data-i18n="privacyPage.stat3Label">Support contact</span>
-              <strong data-i18n="privacyPage.stat3Value">Email-based troubleshooting</strong>
-            </div>
+          </article>
+
+          <div class="privacy-side-stack">
+            <article class="card privacy-overview-card reveal-on-scroll delay-1">
+              <div class="card-heading">
+                <span class="card-kicker" data-i18n="privacyPage.overviewKicker">At a glance</span>
+                <h2 data-i18n="privacyPage.overviewTitle">我们如何处理与隐私相关的信息</h2>
+              </div>
+              <div class="privacy-overview-list">
+                <div class="privacy-overview-item">
+                  <span class="icon-badge">LF</span>
+                  <div>
+                    <strong data-i18n="privacyPage.stat1Label">Data direction</strong>
+                    <span data-i18n="privacyPage.stat1Value">Local-first media workflows</span>
+                  </div>
+                </div>
+                <div class="privacy-overview-item">
+                  <span class="icon-badge">SS</span>
+                  <div>
+                    <strong data-i18n="privacyPage.stat2Label">Sensitive credentials</strong>
+                    <span data-i18n="privacyPage.stat2Value">Device-side secure storage</span>
+                  </div>
+                </div>
+                <div class="privacy-overview-item">
+                  <span class="icon-badge">SC</span>
+                  <div>
+                    <strong data-i18n="privacyPage.stat3Label">Support contact</strong>
+                    <span data-i18n="privacyPage.stat3Value">Email-based troubleshooting</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card privacy-support-card reveal-on-scroll delay-2">
+              <span class="eyebrow" data-i18n="privacyPage.sideEyebrow">Need support?</span>
+              <h2 data-i18n="privacyPage.sideTitle">对隐私实践或审核信息有疑问？</h2>
+              <p data-i18n="privacyPage.sideBody">如果你需要确认支持渠道、隐私页面用途或上架信息，可以直接前往支持与反馈页联系我们。</p>
+              <a class="button primary" href="./feedback.html" data-i18n="privacyPage.sideCta">前往支持页面</a>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="container">
-        <div class="privacy-summary-grid">
-          <article class="card summary-card reveal-on-scroll">
-            <span class="card-kicker" data-i18n="privacyPage.summary1Kicker">Local First</span>
-            <h2 data-i18n="privacyPage.summary1Title">本地文件处理优先在设备侧完成</h2>
-            <p data-i18n="privacyPage.summary1Body">GenPlayer 的核心能力围绕本地访问、远程连接和播放体验展开，不以收集用户内容为产品前提。</p>
-          </article>
-          <article class="card summary-card reveal-on-scroll delay-1">
-            <span class="card-kicker" data-i18n="privacyPage.summary2Kicker">Secure Handling</span>
-            <h2 data-i18n="privacyPage.summary2Title">敏感信息通过更安全的方式处理</h2>
-            <p data-i18n="privacyPage.summary2Body">服务器凭据、访问令牌和类似敏感信息应通过设备侧安全存储方案保管，而不是明文公开暴露。</p>
-          </article>
-          <article class="card summary-card reveal-on-scroll delay-2">
-            <span class="card-kicker" data-i18n="privacyPage.summary3Kicker">User Control</span>
-            <h2 data-i18n="privacyPage.summary3Title">历史、收藏和联系信息可由用户主动控制</h2>
-            <p data-i18n="privacyPage.summary3Body">你可以在应用内删除本地记录，也可以通过支持邮箱联系更新或删除主动提交的反馈信息。</p>
-          </article>
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-heading reveal-on-scroll">
+            <span class="eyebrow" data-i18n="privacyPage.principlesEyebrow">Core principles</span>
+            <h2 data-i18n="privacyPage.principlesTitle">页面结构沿用官网现有设计语言，只把隐私相关信息收束成更清晰的层级。</h2>
+            <p data-i18n="privacyPage.principlesBody">重点说明本地优先、安全存储和用户可控三件事，避免把政策页做成与首页脱节的单独视觉实验。</p>
+          </div>
+
+          <div class="feature-grid privacy-feature-grid">
+            <article class="card feature-card reveal-on-scroll">
+              <span class="icon-badge">LF</span>
+              <span class="card-kicker" data-i18n="privacyPage.summary1Kicker">Local First</span>
+              <h3 data-i18n="privacyPage.summary1Title">本地文件处理优先在设备侧完成</h3>
+              <p data-i18n="privacyPage.summary1Body">GenPlayer 的核心能力围绕本地访问、远程连接和播放体验展开，不以收集用户内容为产品前提。</p>
+            </article>
+            <article class="card feature-card reveal-on-scroll delay-1">
+              <span class="icon-badge">SS</span>
+              <span class="card-kicker" data-i18n="privacyPage.summary2Kicker">Secure Handling</span>
+              <h3 data-i18n="privacyPage.summary2Title">敏感信息通过更安全的方式处理</h3>
+              <p data-i18n="privacyPage.summary2Body">服务器凭据、访问令牌和类似敏感信息应通过设备侧安全存储方案保管，而不是明文公开暴露。</p>
+            </article>
+            <article class="card feature-card reveal-on-scroll delay-2">
+              <span class="icon-badge">UC</span>
+              <span class="card-kicker" data-i18n="privacyPage.summary3Kicker">User Control</span>
+              <h3 data-i18n="privacyPage.summary3Title">历史、收藏和联系信息可由用户主动控制</h3>
+              <p data-i18n="privacyPage.summary3Body">你可以在应用内删除本地记录，也可以通过支持邮箱联系更新或删除主动提交的反馈信息。</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -107,10 +152,22 @@
 
         <aside class="legal-side reveal-on-scroll delay-2">
           <div class="card legal-side-card">
-            <span class="eyebrow" data-i18n="privacyPage.sideEyebrow">Need support?</span>
-            <h2 data-i18n="privacyPage.sideTitle">对隐私实践或审核信息有疑问？</h2>
-            <p data-i18n="privacyPage.sideBody">如果你需要确认支持渠道、隐私页面用途或上架信息，可以直接前往支持与反馈页联系我们。</p>
-            <a class="button primary" href="./feedback.html" data-i18n="privacyPage.sideCta">前往支持页面</a>
+            <span class="card-kicker" data-i18n="privacyPage.quickFactsKicker">Quick facts</span>
+            <h2 data-i18n="privacyPage.quickFactsTitle">这页覆盖的范围</h2>
+            <div class="feature-list">
+              <div class="feature-list-item">
+                <strong data-i18n="privacyPage.quickFact1Title">本地与远程媒体</strong>
+                <span data-i18n="privacyPage.quickFact1Body">包含本地文件、SMB、WebDAV、Jellyfin、Emby 等来源。</span>
+              </div>
+              <div class="feature-list-item">
+                <strong data-i18n="privacyPage.quickFact2Title">历史与收藏</strong>
+                <span data-i18n="privacyPage.quickFact2Body">说明继续播放、收藏和偏好记录在本地的保存逻辑。</span>
+              </div>
+              <div class="feature-list-item">
+                <strong data-i18n="privacyPage.quickFact3Title">支持沟通</strong>
+                <span data-i18n="privacyPage.quickFact3Body">解释通过邮箱或反馈页主动提交信息时的处理用途。</span>
+              </div>
+            </div>
           </div>
         </aside>
       </section>

@@ -278,6 +278,7 @@ body[data-theme='dark'] .site-header {
 }
 
 .hero-grid,
+.privacy-hero-grid,
 .spotlight-shell,
 .feedback-split-card,
 .legal-layout {
@@ -286,6 +287,7 @@ body[data-theme='dark'] .site-header {
 }
 
 .hero-grid,
+.privacy-hero-grid,
 .spotlight-shell {
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
   align-items: center;
@@ -296,6 +298,49 @@ body[data-theme='dark'] .site-header {
 .roadmap-copy {
   position: relative;
   z-index: 1;
+}
+
+.privacy-intro-card,
+.privacy-overview-card,
+.privacy-support-card {
+  display: grid;
+  gap: 18px;
+}
+
+.privacy-intro-card {
+  padding: 34px;
+}
+
+.privacy-intro-card h1 {
+  max-width: 720px;
+  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.privacy-intro-card .lead {
+  margin-bottom: 0;
+}
+
+.privacy-intro-body {
+  max-width: 720px;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.privacy-side-stack,
+.privacy-overview-list {
+  display: grid;
+  gap: 18px;
+}
+
+.privacy-overview-card h2,
+.privacy-support-card h2,
+.legal-side-card h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+  line-height: 1.08;
+  margin-bottom: 0;
 }
 
 .hero-kicker {
@@ -650,6 +695,45 @@ body[data-theme='dark'] .summary-card:hover {
   gap: 10px;
 }
 
+.privacy-overview-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.privacy-overview-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.privacy-overview-item .icon-badge {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.privacy-overview-item strong,
+.privacy-overview-item span {
+  display: block;
+}
+
+.privacy-overview-item span {
+  margin-top: 4px;
+  color: var(--text-muted);
+}
+
+.privacy-feature-grid .feature-card {
+  min-height: 100%;
+}
+
+.privacy-support-card .button {
+  width: auto;
+}
+
 .support-item {
   min-height: 152px;
   justify-content: center;
@@ -878,6 +962,7 @@ body[data-theme='dark'] .feedback-form select {
 
   .showcase-grid,
   .hero-grid,
+  .privacy-hero-grid,
   .spotlight-shell,
   .feedback-split-card,
   .legal-layout {

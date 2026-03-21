@@ -310,10 +310,11 @@ body[data-theme='dark'] .site-header {
 }
 
 .privacy-intro-card h1 {
-  max-width: 720px;
-  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
-  line-height: 1;
-  margin-bottom: 16px;
+  max-width: 560px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
 }
 
 .privacy-intro-card .lead {
@@ -336,8 +337,9 @@ body[data-theme='dark'] .site-header {
 .privacy-overview-card h2,
 .privacy-support-card h2,
 .legal-side-card h2 {
-  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
-  line-height: 1.08;
+  font-size: clamp(1.45rem, 2.15vw, 2rem);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
   margin-bottom: 0;
 }
 
@@ -707,11 +709,13 @@ body[data-theme='dark'] .summary-card:hover {
 }
 
 .privacy-overview-item .icon-badge {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   margin-bottom: 0;
   border-radius: 14px;
   flex-shrink: 0;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
 }
 
 .privacy-overview-item strong,
@@ -722,6 +726,16 @@ body[data-theme='dark'] .summary-card:hover {
 .privacy-overview-item span {
   margin-top: 4px;
   color: var(--text-muted);
+}
+
+.privacy-feature-grid .icon-badge {
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
+.privacy-feature-grid h3,
+.prose-block h2 {
+  letter-spacing: -0.01em;
 }
 
 .privacy-feature-grid .feature-card {

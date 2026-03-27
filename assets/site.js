@@ -1,4 +1,7 @@
-const SUPPORT_EMAIL = ['fufuguo', 'icloud.com'].join('@');
+const SUPPORT_EMAIL = [
+  ['fufuguo86+genplayer'].join(''),
+  ['gmail', 'com'].join('.')
+].join('@');
 const queryParams = new URLSearchParams(window.location.search);
 
 const dictionaries = {

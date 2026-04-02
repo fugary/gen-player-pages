@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gen Player - 更新记录</title>
+    <meta name="description" content="Gen Player 可读版本更新记录，收录已正式发布版本的主要改动。" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var theme = (params.get('theme') || localStorage.getItem('genplayer-theme') || '').toLowerCase();
+        var lang = (params.get('lang') || localStorage.getItem('genplayer-language') || '').toLowerCase();
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (lang.indexOf('zh') === 0) {
+          document.documentElement.lang = 'zh-CN';
+        } else if (lang.indexOf('en') === 0) {
+          document.documentElement.lang = 'en';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        document.documentElement.style.backgroundColor = theme === 'dark' ? '#070812' : '#f4efe8';
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles.css?v=20260402a" />
+  </head>
+  <body data-page="changelog">
+    <div class="site-backdrop" aria-hidden="true">
+      <span class="backdrop-orb orb-a"></span>
+      <span class="backdrop-orb orb-b"></span>
+      <span class="backdrop-grid"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="./index.html">
+          <img class="brand-mark" src="./assets/app-icon.png" alt="Gen Player app icon" />
+          <span>Gen Player</span>
+        </a>
+        <nav class="nav-links">
+          <a href="./index.html" data-i18n="nav.home">首页</a>
+          <a href="./changelog.html" data-i18n="nav.changelog">版本记录</a>
+          <a href="./privacy.html" data-i18n="nav.privacy">隐私政策</a>
+          <a href="./feedback.html" data-i18n="nav.feedback">问题反馈</a>
+        </nav>
+        <div class="toolbar">
+          <button type="button" class="toggle" id="themeToggle" aria-label="Theme toggle">◐</button>
+          <button type="button" class="toggle" id="langToggle" aria-label="Language toggle">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main page-shell">
+      <section class="container">
+        <div class="card page-hero-card reveal-on-scroll">
+          <div class="page-hero-copy">
+            <h1 data-i18n="changelogPage.title">版本更新记录</h1>
+            <p class="lead" data-i18n="changelogPage.description">这里提供用户可读的版本说明，收录已经正式发布的版本。</p>
+          </div>
+          <div class="page-hero-aside">
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="changelogPage.stat1Label">当前收录</span>
+              <strong data-i18n="changelogPage.stat1Value">2 个正式版本</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="changelogPage.stat2Label">推荐做法</span>
+              <strong data-i18n="changelogPage.stat2Value">App 内入口 + 官网完整页</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-label" data-i18n="changelogPage.stat3Label">更新方式</span>
+              <strong data-i18n="changelogPage.stat3Value">每次正式发布同步补充</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container support-overview">
+        <section class="card prose-block reveal-on-scroll">
+          <div class="card-heading">
+            <h2 data-i18n="changelogPage.recommendationTitle">建议：独立页面承载完整版本说明</h2>
+          </div>
+          <p data-i18n="changelogPage.recommendationBody">为了可读性和可维护性，建议把“完整变更记录”放在独立页面，再在 App 设置页提供一个“版本记录”入口跳转到官网该页面。</p>
+        </section>
+      </section>
+
+      <section class="container">
+        <div class="feature-grid">
+          <article class="card feature-card reveal-on-scroll">
+            <span class="icon-badge">1.0.1</span>
+            <h3 data-i18n="changelogPage.v101Title">v1.0.1（正式版）</h3>
+            <p data-i18n="changelogPage.v101Date">发布日期：2026-03-xx</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><span data-i18n="changelogPage.v101Item1">优化播放器稳定性与播放恢复链路。</span></div>
+              <div class="feature-list-item"><span data-i18n="changelogPage.v101Item2">改进下载中心和存储管理页面的信息结构。</span></div>
+              <div class="feature-list-item"><span data-i18n="changelogPage.v101Item3">持续完善 Jellyfin / Emby / Plex 的媒体浏览与图片缓存体验。</span></div>
+            </div>
+          </article>
+
+          <article class="card feature-card reveal-on-scroll delay-1">
+            <span class="icon-badge">1.0.0</span>
+            <h3 data-i18n="changelogPage.v100Title">v1.0.0（正式版）</h3>
+            <p data-i18n="changelogPage.v100Date">发布日期：2026-03-xx</p>
+            <div class="feature-list">
+              <div class="feature-list-item"><span data-i18n="changelogPage.v100Item1">首个正式发布版本，提供本地文件与远程媒体一体化体验。</span></div>
+              <div class="feature-list-item"><span data-i18n="changelogPage.v100Item2">支持 SMB / WebDAV / Jellyfin / Emby / Plex 等主流媒体来源。</span></div>
+              <div class="feature-list-item"><span data-i18n="changelogPage.v100Item3">包含历史、收藏、下载中心与 VLC 播放内核基础能力。</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <p>© <span id="year"></span> Gen Player</p>
+        <div class="footer-links">
+          <a href="./index.html" data-i18n="footer.home">首页</a>
+          <a href="./changelog.html" data-i18n="footer.changelog">版本记录</a>
+          <a href="./privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/site.js?v=20260402a"></script>
+  </body>
+</html>

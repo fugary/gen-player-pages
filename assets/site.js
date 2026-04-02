@@ -12,6 +12,7 @@ const dictionaries = {
       scenarios: '场景',
       privacy: '隐私政策',
       feedback: '问题反馈',
+      changelog: '版本记录',
       home: '首页'
     },
     hero: {
@@ -232,6 +233,29 @@ const dictionaries = {
       formMessagePlaceholder: '请描述问题现象、复现步骤、期望结果，以及是否能够稳定复现。',
       formSubmit: '生成反馈邮件'
     },
+
+    changelogPage: {
+      title: '版本更新记录',
+      description: '这里提供用户可读的版本说明，收录已经正式发布的版本。',
+      stat1Label: '当前收录',
+      stat1Value: '2 个正式版本',
+      stat2Label: '推荐做法',
+      stat2Value: 'App 内入口 + 官网完整页',
+      stat3Label: '更新方式',
+      stat3Value: '每次正式发布同步补充',
+      recommendationTitle: '建议：独立页面承载完整版本说明',
+      recommendationBody: '为了可读性和可维护性，建议把“完整变更记录”放在独立页面，再在 App 设置页提供一个“版本记录”入口跳转到官网该页面。',
+      v101Title: 'v1.0.1（正式版）',
+      v101Date: '发布日期：2026-03-xx',
+      v101Item1: '优化播放器稳定性与播放恢复链路。',
+      v101Item2: '改进下载中心和存储管理页面的信息结构。',
+      v101Item3: '持续完善 Jellyfin / Emby / Plex 的媒体浏览与图片缓存体验。',
+      v100Title: 'v1.0.0（正式版）',
+      v100Date: '发布日期：2026-03-xx',
+      v100Item1: '首个正式发布版本，提供本地文件与远程媒体一体化体验。',
+      v100Item2: '支持 SMB / WebDAV / Jellyfin / Emby / Plex 等主流媒体来源。',
+      v100Item3: '包含历史、收藏、下载中心与 VLC 播放内核基础能力。'
+    },
     notFoundPage: {
       eyebrow: '页面不存在',
       title: '这个页面不存在，或者已经移动。',
@@ -242,6 +266,7 @@ const dictionaries = {
     footer: {
       privacy: '隐私政策',
       feedback: '问题反馈',
+      changelog: '版本记录',
       home: '首页'
     }
   },
@@ -252,6 +277,7 @@ const dictionaries = {
       scenarios: 'Scenarios',
       privacy: 'Privacy',
       feedback: 'Support',
+      changelog: 'Release Notes',
       home: 'Home'
     },
     hero: {
@@ -472,6 +498,28 @@ const dictionaries = {
       formMessagePlaceholder: 'Describe the issue, reproduction steps, expected result, and whether it happens consistently.',
       formSubmit: 'Generate email'
     },
+    changelogPage: {
+      title: 'Release notes',
+      description: 'A readable changelog for versions that are already officially released.',
+      stat1Label: 'Currently listed',
+      stat1Value: '2 production versions',
+      stat2Label: 'Recommended structure',
+      stat2Value: 'In-app entry + full website page',
+      stat3Label: 'Update cadence',
+      stat3Value: 'Update on every production release',
+      recommendationTitle: 'Recommendation: keep full release notes on a dedicated page',
+      recommendationBody: 'For readability and long-term maintenance, keep the complete changelog on a dedicated page and add a "Release Notes" entry in app settings that opens this page.',
+      v101Title: 'v1.0.1 (Production)',
+      v101Date: 'Released: March 2026',
+      v101Item1: 'Improved playback stability and resume recovery paths.',
+      v101Item2: 'Refined information structure in Download Center and Storage views.',
+      v101Item3: 'Continued improvements for Jellyfin / Emby / Plex browsing and image caching.',
+      v100Title: 'v1.0.0 (Production)',
+      v100Date: 'Released: March 2026',
+      v100Item1: 'First production release with unified local + remote media workflows.',
+      v100Item2: 'Support for SMB / WebDAV / Jellyfin / Emby / Plex media sources.',
+      v100Item3: 'Shipped baseline history, favorites, download center, and VLC playback capabilities.'
+    },
     notFoundPage: {
       eyebrow: 'Page Not Found',
       title: 'This page does not exist, or it has moved.',
@@ -482,6 +530,7 @@ const dictionaries = {
     footer: {
       privacy: 'Privacy',
       feedback: 'Support',
+      changelog: 'Release Notes',
       home: 'Home'
     }
   }

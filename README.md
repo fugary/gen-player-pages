@@ -30,6 +30,62 @@ python3 -m http.server 8080 --directory website
 - Netlify
 - Vercel
 
+如果主要访问人群在中国大陆，`GitHub Pages` 往往更适合作为“发布源”而不是“最终加速层”。更推荐：
+
+- `Aliyun OSS + CDN`
+  - 最稳妥的国内静态托管方案，直接把 `website/` 同步到 OSS，再由 CDN 对外分发。
+- `ECS / Nginx + CDN`
+  - 保持你现有阿里云基础设施，静态文件直接放在 ECS 上，或由 Nginx 反向代理并缓存 GitHub Pages。
+- `Cloudflare Pages / Cloudflare CDN`
+  - 海外访问体验通常更好，但大陆网络稳定性仍不如阿里云本地源站。
+
+### 国内访问与缓存建议
+
+如果域名仍然直接指向 `GitHub Pages`，你在阿里云上额外配一个 `Nginx` 并不会让访客更快；只有当域名先访问你的 `Nginx/CDN`，再由它回源 GitHub Pages 时，缓存才会生效。
+
+实际优先级建议：
+
+1. `最佳实践`
+   - 继续把当前仓库当作内容源
+   - Actions 同步 `website/` 到阿里云 OSS 或你的 ECS 目录
+   - 前面挂阿里云 CDN
+2. `次优实践`
+   - 保持 GitHub Pages 为源站
+   - 域名改到阿里云 ECS / Nginx
+   - 用 `proxy_cache` 对静态资源做回源缓存
+3. `不太推荐`
+   - 继续让用户直连 GitHub Pages，单靠页面自身很难解决跨境链路慢的问题
+
+一个最小可用的 `Nginx` 缓存代理示例：
+
+```nginx
+proxy_cache_path /var/cache/nginx/genplayer levels=1:2 keys_zone=genplayer_static:50m max_size=1g inactive=7d use_temp_path=off;
+
+server {
+    listen 80;
+    server_name genplayer.fugary.com;
+
+    location / {
+        proxy_pass https://fugary.github.io/gen-player-pages/;
+        proxy_set_header Host fugary.github.io;
+        proxy_ssl_server_name on;
+
+        proxy_cache genplayer_static;
+        proxy_cache_valid 200 301 302 10m;
+        proxy_cache_valid 404 1m;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+
+        add_header X-Cache-Status $upstream_cache_status always;
+    }
+}
+```
+
+如果后续主要面向国内用户，仍建议把它进一步收口为：
+
+- `GitHub 仓库做源码与自动发布`
+- `Aliyun OSS / ECS 做正式源站`
+- `阿里云 CDN 做加速和缓存`
+
 ## GitHub Pages 发布
 
 如果主仓库是私有仓库，推荐采用：

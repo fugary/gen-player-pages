@@ -247,6 +247,7 @@ body[data-theme='dark'] .site-header {
 }
 
 .nav-links,
+.header-actions,
 .toolbar,
 .footer-links,
 .hero-proof,
@@ -271,6 +272,10 @@ body[data-theme='dark'] .site-header {
   transform: translateY(-1px);
 }
 
+.header-actions {
+  margin-left: auto;
+}
+
 .toggle,
 .button,
 .proof-chip,
@@ -287,6 +292,20 @@ body[data-theme='dark'] .site-header {
   background: var(--panel-solid);
   color: var(--text);
   box-shadow: var(--shadow-md);
+}
+
+.nav-download {
+  min-height: 46px;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+body[data-theme='dark'] .nav-download {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .hero-home {
@@ -1099,6 +1118,10 @@ body[data-theme='dark'] .feedback-form select {
     width: 100%;
   }
 
+  .header-actions {
+    margin-left: 0;
+  }
+
   .hero-home,
   .section,
   .page-main {
@@ -1150,6 +1173,10 @@ body[data-theme='dark'] .feedback-form select {
 
   .button {
     width: 100%;
+  }
+
+  .header-actions .button {
+    width: auto;
   }
 
   .hero-copy h1 {

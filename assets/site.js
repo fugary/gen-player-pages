@@ -13,6 +13,7 @@ const dictionaries = {
       privacy: '隐私政策',
       feedback: '问题反馈',
       changelog: '版本记录',
+      download: 'App Store',
       home: '首页'
     },
     hero: {
@@ -20,8 +21,8 @@ const dictionaries = {
       spotlight: '为家庭媒体库和移动设备设计的现代播放器体验',
       title: '把文件、媒体库与播放体验整合成一个更统一的入口。',
       description: 'Gen Player 将本地文件管理、SMB / WebDAV 网络访问、Jellyfin / Emby 媒体库与 VLC 播放核心整合到一套更完整的体验里。',
-      primaryCta: '查看核心功能',
-      secondaryCta: '获取支持与反馈',
+      primaryCta: '在 App Store 下载',
+      secondaryCta: '查看核心功能',
       proof1: '本地文件 + 远程服务统一管理',
       proof2: '支持离线关联播放与继续观看',
       proof3: '面向 iPhone / iPad / tvOS',
@@ -138,8 +139,8 @@ const dictionaries = {
       eyebrow: '路线图',
       title: '继续推进多端同步、下载中心和更完整的离线关联播放。',
       body: '当前重点方向包括下载中心深化、历史/收藏/服务器数据一致性，以及未来的同步与扩展能力。',
-      primaryCta: '提交问题反馈',
-      secondaryCta: '查看隐私承诺'
+      primaryCta: '前往 App Store 下载',
+      secondaryCta: '提交问题反馈'
     },
     privacyPage: {
       eyebrow: '隐私政策',
@@ -262,6 +263,7 @@ const dictionaries = {
       secondaryCta: '问题反馈'
     },
     footer: {
+      download: 'App Store 下载',
       privacy: '隐私政策',
       feedback: '问题反馈',
       changelog: '版本记录',
@@ -276,6 +278,7 @@ const dictionaries = {
       privacy: 'Privacy',
       feedback: 'Support',
       changelog: 'Release Notes',
+      download: 'App Store',
       home: 'Home'
     },
     hero: {
@@ -283,8 +286,8 @@ const dictionaries = {
       spotlight: 'A more modern playback experience for home media libraries and mobile devices',
       title: 'Bring files, libraries, and playback together in one clearer experience.',
       description: 'Gen Player combines local file management, SMB / WebDAV access, Jellyfin / Emby libraries, and a VLC-powered playback core into one more complete workflow.',
-      primaryCta: 'Explore features',
-      secondaryCta: 'Get support',
+      primaryCta: 'Download on the App Store',
+      secondaryCta: 'Explore features',
       proof1: 'Manage local files and remote services together',
       proof2: 'Built around offline-linked playback and resume flows',
       proof3: 'Designed for iPhone, iPad, and tvOS',
@@ -401,8 +404,8 @@ const dictionaries = {
       eyebrow: 'Roadmap',
       title: 'Next up: multi-device sync, a deeper download center, and richer offline-linked playback.',
       body: 'Current priorities include deeper download workflows, consistency across history, favorites, and servers, plus future sync and extensibility.',
-      primaryCta: 'Send feedback',
-      secondaryCta: 'See privacy commitments'
+      primaryCta: 'Download on the App Store',
+      secondaryCta: 'Send feedback'
     },
     privacyPage: {
       eyebrow: 'Privacy Policy',
@@ -524,6 +527,7 @@ const dictionaries = {
       secondaryCta: 'Get support'
     },
     footer: {
+      download: 'App Store',
       privacy: 'Privacy',
       feedback: 'Support',
       changelog: 'Release Notes',

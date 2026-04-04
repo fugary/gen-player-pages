@@ -1,7 +1,7 @@
 :root {
   color-scheme: light dark;
-  --font-display: "Avenir Next", "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --font-body: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --bg: #f4efe8;
   --bg-soft: #fffaf3;
   --panel: rgba(255, 253, 248, 0.78);
@@ -71,8 +71,9 @@ body {
 
 body[data-theme='dark'] {
   background:
-    radial-gradient(circle at top left, rgba(151, 111, 255, 0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(78, 99, 234, 0.2), transparent 34%),
+    radial-gradient(circle at 10% -10%, rgba(112, 14, 255, 0.24), transparent 35%),
+    radial-gradient(circle at 90% 15%, rgba(0, 183, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255, 0, 102, 0.08), transparent 45%),
     var(--bg);
 }
 
@@ -100,7 +101,8 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  font-weight: 800;
 }
 
 html[lang='zh-CN'] h1,
@@ -541,10 +543,18 @@ body[data-theme='dark'] .note-label {
 }
 
 .button.primary {
-  color: #f8fffd;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 55%, var(--accent-warm) 100%);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 45%, var(--accent-warm) 100%);
   border-color: transparent;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 12px 24px var(--accent-soft);
+  background-size: 200% 200%;
+  transition: transform 240ms cubic-bezier(0.4, 0, 0.2, 1), background-position 400ms ease, box-shadow 240ms ease;
+}
+
+.button.primary:hover {
+  background-position: 100% 100%;
+  box-shadow: 0 16px 32px var(--accent-soft);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .button.secondary {
@@ -584,7 +594,9 @@ body[data-theme='dark'] .pill {
   border-radius: var(--radius-xl);
   background: var(--panel);
   box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), border-color 280ms ease;
 }
 
 .card::before {
@@ -781,16 +793,17 @@ body[data-theme='dark'] .pill {
 .scenario-card:hover,
 .support-item:hover,
 .summary-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--line-strong);
-  box-shadow: 0 24px 54px rgba(34, 45, 49, 0.12);
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(15, 118, 110, 0.2);
+  box-shadow: 0 32px 64px rgba(34, 45, 49, 0.16);
 }
 
 body[data-theme='dark'] .feature-card:hover,
 body[data-theme='dark'] .scenario-card:hover,
 body[data-theme='dark'] .support-item:hover,
 body[data-theme='dark'] .summary-card:hover {
-  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 32px 74px rgba(0, 0, 0, 0.4), 0 0 40px rgba(140, 123, 255, 0.08);
 }
 
 .icon-badge {

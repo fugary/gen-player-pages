@@ -321,6 +321,10 @@ body[data-theme='dark'] .nav-download {
   min-height: calc(100vh - 156px);
 }
 
+.page-main > .container + .container {
+  margin-top: 26px;
+}
+
 .hero-grid,
 .privacy-hero-grid,
 .spotlight-shell,
@@ -357,6 +361,50 @@ body[data-theme='dark'] .nav-download {
   font-size: clamp(3.1rem, 6vw, 5.15rem);
   line-height: 1.02;
   margin-bottom: 18px;
+}
+
+.hero-copy .lead {
+  margin-bottom: 0;
+}
+
+.hero-copy .hero-actions {
+  margin-top: 28px;
+}
+
+.hero-copy .hero-proof {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  justify-items: start;
+}
+
+.hero-copy .proof-chip {
+  position: relative;
+  padding: 0 0 0 18px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+body[data-theme='dark'] .hero-copy .proof-chip {
+  border: none;
+  background: none;
+}
+
+.hero-copy .proof-chip::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-warm) 100%);
+  box-shadow: 0 0 0 5px var(--accent-soft);
 }
 
 .page-hero-copy > :first-child,
@@ -1128,6 +1176,10 @@ body[data-theme='dark'] .feedback-form select {
     padding: 48px 0;
   }
 
+  .page-main > .container + .container {
+    margin-top: 20px;
+  }
+
   .hero-visual {
     min-height: auto;
     padding-top: 24px;
@@ -1177,6 +1229,14 @@ body[data-theme='dark'] .feedback-form select {
 
   .header-actions .button {
     width: auto;
+  }
+
+  .hero-copy .hero-actions {
+    margin-top: 24px;
+  }
+
+  .hero-copy .hero-proof {
+    margin-top: 22px;
   }
 
   .hero-copy h1 {

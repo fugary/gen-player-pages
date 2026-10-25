@@ -14,6 +14,8 @@ const dictionaries = {
       feedback: '问题反馈',
       changelog: '版本记录',
       download: 'App Store',
+      downloadCn: '中国大陆',
+      downloadGlobal: '其他地区',
       home: '首页'
     },
     hero: {
@@ -22,6 +24,8 @@ const dictionaries = {
       title: '把文件、媒体库与播放体验整合成一个更统一的入口。',
       description: 'Gen Player 将本地文件整理、SMB / WebDAV / Alist 远程访问、Jellyfin / Emby / Plex 媒体库与 mpv + VLC 现代双播放内核整合到一套更完整的全生态体验里。',
       primaryCta: '在 App Store 下载',
+      primaryCtaCn: 'App Store 下载（中国大陆）',
+      primaryCtaGlobal: 'App Store（其他地区）',
       secondaryCta: '查看核心功能',
       proof1: '本地文件 + 远程服务统一管理',
       proof2: '支持离线关联播放与继续观看',
@@ -144,6 +148,8 @@ const dictionaries = {
       title: '继续推进多端同步、下载中心和更完整的离线关联播放。',
       body: '当前重点方向包括下载中心深化、历史/收藏/服务器数据一致性，以及未来的同步与扩展能力。',
       primaryCta: '前往 App Store 下载',
+      primaryCtaCn: '前往 App Store（中国大陆）',
+      primaryCtaGlobal: 'App Store（其他地区）',
       secondaryCta: '提交问题反馈'
     },
     privacyPage: {
@@ -371,6 +377,8 @@ const dictionaries = {
     },
     footer: {
       download: 'App Store 下载',
+      downloadCn: 'App Store（中国大陆）',
+      downloadGlobal: 'App Store（其他地区）',
       privacy: '隐私政策',
       feedback: '问题反馈',
       changelog: '版本记录',
@@ -386,6 +394,8 @@ const dictionaries = {
       feedback: 'Support',
       changelog: 'Release Notes',
       download: 'App Store',
+      downloadCn: 'China',
+      downloadGlobal: 'Global',
       home: 'Home'
     },
     hero: {
@@ -394,6 +404,8 @@ const dictionaries = {
       title: 'Bring files, libraries, and playback together in one clearer experience.',
       description: 'Gen Player combines local file management, SMB / WebDAV / Alist access, Jellyfin / Emby / Plex libraries, and modern mpv + VLC dual playback engines into one cohesive experience across your Apple devices.',
       primaryCta: 'Download on the App Store',
+      primaryCtaCn: 'Download (China App Store)',
+      primaryCtaGlobal: 'App Store (Global)',
       secondaryCta: 'Explore features',
       proof1: 'Manage local files and remote services together',
       proof2: 'Built around offline-linked playback and resume flows',
@@ -516,6 +528,8 @@ const dictionaries = {
       title: 'Next up: multi-device sync, a deeper download center, and richer offline-linked playback.',
       body: 'Current priorities include deeper download workflows, consistency across history, favorites, and servers, plus future sync and extensibility.',
       primaryCta: 'Download on the App Store',
+      primaryCtaCn: 'App Store (China)',
+      primaryCtaGlobal: 'App Store (Global)',
       secondaryCta: 'Send feedback'
     },
     privacyPage: {
@@ -742,6 +756,8 @@ const dictionaries = {
     },
     footer: {
       download: 'App Store',
+      downloadCn: 'App Store (China)',
+      downloadGlobal: 'App Store (Global)',
       privacy: 'Privacy',
       feedback: 'Support',
       changelog: 'Release Notes',
@@ -793,11 +809,6 @@ const getPreferredTheme = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
-const APP_STORE_URLS = {
-  'zh-CN': 'https://apps.apple.com/cn/app/gen-player/id6760933333',
-  en: 'https://apps.apple.com/us/app/gen-player/id6760933333'
-};
-
 const applyLanguage = (language) => {
   const dict = flatten(dictionaries[language] || dictionaries.en);
   document.documentElement.lang = language === 'zh-CN' ? 'zh-CN' : 'en';
@@ -810,11 +821,6 @@ const applyLanguage = (language) => {
   document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
     const key = node.getAttribute('data-i18n-placeholder');
     if (dict[key]) node.setAttribute('placeholder', dict[key]);
-  });
-
-  const appStoreUrl = APP_STORE_URLS[language] || APP_STORE_URLS.en;
-  document.querySelectorAll('a[href*="apps.apple.com"]').forEach((link) => {
-    link.href = appStoreUrl;
   });
 
   const langToggle = document.getElementById('langToggle');
